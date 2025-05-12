@@ -1,0 +1,276 @@
+/* BASE (Global Styles) */
+
+:root {
+    --lobster-font: "Poppins", sans-serif;
+    --dm-font: "DM Sans", sans-serif;
+    --base-font-size: 18px;
+    --primary-color: rgb(0, 0, 255);
+    --secondary-color: rgb(255, 255, 255);
+    --background-color: white;
+    --text-color: white;
+}
+
+html {
+    font-size: var(--base-font-size);
+    font-family: var(--dm-font);
+    color: rgb(0, 0, 0);
+}
+
+body {
+    background-color: #f0f4f8;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+h2 {
+    font-family: var(--lobster-font);
+    color: rgb(0, 0, 0);
+    font-size: 2rem;
+}
+
+.subtitles {
+    color: rgb(4, 0, 128);
+    font-size: 1.7rem;
+}
+
+p {
+    font-size: 1rem;
+}
+
+.text-label {
+    background-color: rgb(255, 255, 255);
+    border: 1px solid var(--primary-color);
+    padding: 0.5rem;
+    border-radius: 25px;
+    color: var(--primary-color);
+    font-weight: bold;
+    text-transform: uppercase;
+    font-size: 1rem;
+}
+
+.center-row {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.center-column {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+
+/* HEADER */
+
+header {
+    height: 60px;
+    background-color: #ffffff;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    top: 0px;
+    position: sticky;
+    display: flex;
+    font-family: "Comic Relief", sans-serif;
+    justify-content: space-between;
+}
+
+.header-left-side {
+    border: solid 1px rgb(0, 0, 0);
+    width: 30%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.header-right-side {
+    border: solid 1px black;
+    width: 70%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+
+.nav-options {
+    display: flex;
+}
+
+.nav-options a {
+    background-color: none;
+    color: black;
+    text-transform: uppercase;
+    margin: 2% 1%;
+    font-family: "Comic Relief", sans-serif;
+    font-size: 1.2rem;
+    padding: 0.5rem 1rem;
+    border-radius: 5px; 
+}
+
+.nav-options a:hover {
+    background-color: #0056b3;
+    border-bottom: none;
+    color: white;
+}
+
+.hamburger-button {
+    display: none;
+    color: var(--primary-color);
+    background-color: rgb(159, 41, 41);
+    border: none;
+    width: 30px;
+    height: 30px;
+    font-size: 2rem;
+    border-radius: 2px;
+    cursor: pointer;
+}
+
+.hamburger-button:hover {
+    opacity: 0.8;
+}
+
+section {
+    padding: 4rem 2rem;
+}
+
+/* ABOUT SECTION */
+
+.about-section {
+    background-color: #e9f5fb;
+    padding: 4rem 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 3rem;
+    flex-wrap: wrap;
+}
+
+.about-image-container {
+    width: 300px;
+    flex-shrink: 0;
+}
+
+.about-image-container img {
+    width: 100%;
+    max-width: 300px;
+    height: auto;
+    border-radius: 50%;
+    border: 5px solid white;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+}
+
+.about-description-container {
+    width: 100%;
+    max-width: 600px;
+}
+
+.about-description-container p {
+    margin-top: 2rem;
+    width: 80%;
+}
+
+/* SKILLS SECTION */
+
+.skills-section {
+    padding: 2rem; 
+    text-align: center;
+}
+
+.skills-list {
+    color: 3333;
+    padding: 1rem;
+    border-radius: 10px;
+    border: none;    
+    outline: none;   
+    margin: 1rem auto;
+    text-align: center;
+    font-weight: 600;
+}
+
+
+.skills-list:focus {
+    outline: none;
+}
+
+
+/* MEDIA QUERIES - RESPONSIVE DESIGN */
+
+/* Tablets and small desktops */
+@media (max-width: 1007px) {
+
+    html {
+        font-size: 16px;
+    }
+
+    .about-section {
+        background-color: aliceblue;
+    }
+
+    .about-image-container {
+        width: 80%;
+    }
+
+    .about-description-container {
+        width: 90%;
+    }
+}
+
+/* Smartphones */
+@media (max-width: 640px) {
+
+    html {
+        font-size: 12px;
+    }
+
+    header {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .header-left-side,
+    .header-right-side {
+        width: 100%;
+    }
+
+    .hamburger-button {
+        display: block;
+    }
+
+    .nav-options {
+        display: none;
+        flex-direction: column;
+        align-items: center;
+        background-color: lightblue;
+        position: absolute;
+        top: 60px;
+        right: 0;
+        width: 100%;
+        z-index: 999;
+    }
+
+    .nav-options.show {
+        display: flex;
+    }
+
+    .about-section {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 2rem;
+        flex-direction: column;
+    }
+
+    .about-image-container,
+    .about-description-container {
+        width: 90%;
+        text-align: center;
+    }
+
+    .about-description-container p {
+        width: 100%;
+    }
+
+    .skills-list {
+        width: 100%;
+    }
+}
