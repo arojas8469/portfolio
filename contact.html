@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./css/base.css" />
+    <title>Contact - Anthony Rojas</title>
+</head>
+<body>
+    <header>
+        <div class="header-left-side">
+            <a href="index.html">
+                <h2>Anthony Rojas</h2>
+            </a>
+        </div>
+
+        <nav class="header-right-side">
+            <button class="hamburger-button">=</button>
+            <div class="nav-options">
+                <a href="index.html">About Me</a>
+                <a href="projects.html">Projects</a>
+                <a href="experience.html">Experience</a>
+                <a href="contact.html">Contact</a>
+            </div>
+        </nav>
+    </header>
+
+    <section class="contact-section">
+        <h2 class="subtitles">Contact Me</h2>
+            <form action="https://formsubmit.co/anthony.rojas099@gmail.com" method="POST" class="contact-form">
+                <input type="text" name="name" placeholder="Your Name" required />
+                <input type="email" name="email" placeholder="Your Email" required />
+                <textarea name="message" rows="5" placeholder="Your Message" required></textarea>
+                <button type="submit">Send</button>
+            </form>
+    </section>
+
+
+
+<script>
+    const hamburgerBtn = document.querySelector('.hamburger-button');
+    const navMenu = document.querySelector('.nav-options');
+        hamburgerBtn.addEventListener('click', function () 
+        {
+            navMenu.classList.toggle('show');
+        })
+</script>
+
+</body>
+</html>

@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./css/base.css" />
+    <title>Experience - Anthony Rojas</title>
+</head>
+<body>
+    <header>
+        <div class="header-left-side">
+        <a href="index.html">
+            <h2>Anthony Rojas</h2>
+        </a>
+    </div>
+
+    <nav class="header-right-side">
+        <button class="hamburger-button">=</button>
+
+        <div class="nav-options">
+            <a href="index.html">About Me</a>
+            <a href="projects.html">Projects</a>
+            <a href="experience.html">Experience</a>
+            <a href="contact.html">Contact</a>
+        </div>
+        </nav>
+    </header>
+
+    <section class="experience-section">
+        <h2 class="subtitles">My Experience</h2>
+
+        <div class="experience-entry">
+            <h3>Full Stack Developer Intern – SDGKU Bootcamp</h3>
+            <p>Worked on building responsive websites and applications using HTML, CSS, JavaScript, Python, and Django.</p>
+            <p><strong>Tools used:</strong> VS Code, Git, GitHub, Django, Figma</p>
+        </div>
+
+        <div class="experience-entry">
+            <h3>Personal Projects</h3>
+            <p>Created full stack projects like a pet salon management system and an issue tracker with user roles.</p>
+        </div>
+    </section>
+
+<script>
+    const hamburgerBtn = document.querySelector('.hamburger-button');
+    const navMenu = document.querySelector('.nav-options');
+    hamburgerBtn.addEventListener('click', function () {
+        navMenu.classList.toggle('show');
+    });
+</script>
+
+</body>
+</html>

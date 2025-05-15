@@ -20,12 +20,37 @@
             <div class="nav-options">
                 <a href="index.html">About Me</a>
                 <a href="projects.html">Projects</a>
-                <a href="">Experience</a>
-                <a href="">Contact</a>
+                <a href="experience.html">Experience</a>
+                <a href="contact.html">Contact</a>
             </div>
 
         </nav>
     </header>
-    <h1>My Projects</h1>
+    <section class="projects-section">
+        <h2 class="subtitles">My Projects</h2>
+
+    <div class="project-card">
+        <h3>Pet Salon App</h3>
+        <p>A web app to register and manage pet salon services using HTML, CSS, and JavaScript.</p>
+        <a href="https://github.com/yourusername/pet-salon" target="_blank">View Project</a>
+    </div>
+
+    <div class="project-card">
+        <h3>Issue Tracker</h3>
+        <p>Django-powered issue tracker with user roles and project management features.</p>
+        <a href="https://github.com/yourusername/issue-tracker" target="_blank">View Project</a>
+    </div>
+</section>
+
+
+
+<script>
+    const hamburgerBtn = document.querySelector('.hamburger-button');
+    const navMenu = document.querySelector('.nav-options');
+    hamburgerBtn.addEventListener('click', function () {
+        navMenu.classList.toggle('show');
+    });
+</script>
+
 </body>
 </html>
